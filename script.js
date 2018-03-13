@@ -1,0 +1,1 @@
+var demoColorPicker = new iro.ColorPicker("#color-picker-container");
