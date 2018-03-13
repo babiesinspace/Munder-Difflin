@@ -1,3 +1,10 @@
 h1 {
   font-family: 'Londrina Outline', cursive;
 }
+
+#swatch-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 2px;
+  background-color: orange;
+}
