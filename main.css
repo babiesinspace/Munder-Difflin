@@ -1,0 +1,102 @@
+/*html {
+  height: 100%
+}
+*/
+body {
+  background-color: #e9ebe8;
+}
+
+/*.navbar>.container, .navbar>.container-fluid {
+  margin: 0 auto;
+}*/
+
+#foot {
+  background-color: #adb3b2;
+  padding-top: 2%;
+}
+
+h1 {
+/*  font-family: 'Londrina Outline', cursive;*/
+  font-family: 'Rammetto One', cursive;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  z-index: 10;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+#swatch-box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  margin-top: 20%;
+  margin-bottom: 3%;
+}
+
+#cart-container {
+  margin: 0 auto;
+  margin-top: 1%;
+  width: 90%;
+  height: 302px;
+  border: 1px solid black;
+  position: relative;
+}
+
+#cart {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  display: flex;
+}
+
+#available {
+  padding-left: 1%;
+  color: green;
+/*  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+*/}
+
+#show-stock {
+  margin-top: 3%;
+  display: flex;
+}
+
+#shop-color {
+  display: table;
+  margin: 0 auto;
+  width: 90%;
+}
+
+#shop-color > div {
+  width: auto;
+  display: table-cell;
+  vertical-align: middle;
+  height: 500px;
+}
+
+h4, #color-value, #available, #alt-colors {
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+#similar.hidden {
+  display: none;
+}
+
+#add {
+  margin-top: 3%;
+}
+
+#mini-cart {
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

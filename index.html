@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--   <link href="https://fonts.googleapis.com/css?family=Londrina+Outline" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swatch It</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <i class="fab fa-pied-piper-alt fa-2x"></i><a class="navbar-brand" href="#"> Munder Difflin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse mr-auto" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="#">ReOrder <i class="fas fa-sync-alt"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cart <i class="fas fa-shopping-cart"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login <i class="fas fa-user"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="cart-container">
+    <h1>SwatchBook Remember to give this a high z-index somehow</h1>
+    <div id="cart" class="default"><!-- Default Color Changes based on color picker. Hide after --></div>  
+  </section>
+  <section id="shop-color">
+    <div id="color-picker-container"></div>
+    <div id="sample">
+      <div id="swatch-box"></div>
+      <h4>Values:</h4>
+      <div id="color-value">hex: #a3dfff</br>rgb: rgb(163, 223, 255)</br>hsl: hsl(201, 100%, 82%)</div>
+      <div id="show-stock">
+        <h4>Availability:  </h4><span id="available">High - In Stock</span>       
+      </div>
+      <div>
+        <button id="add">Add to Bag</button>
+      </div>
+    </div>
+    <div id="similar" class="hidden">
+      <h4>Similar Items:</h4>
+      <ul id="alt-colors">
+        <li>Swatch 1</li>
+        <li>Swatch 2</li>
+        <li>Swatch 3</li>
+        <li>Swatch 4</li>        
+      </ul>
+    </div>
+  </section>
+
+  <section id="mini-cart">
+    <div><h5>Subtotal: $<span id="subtotal">0</span></h5></div>
+    <div>
+      <h5><button>Check Out</button></h5>
+    </div>
+    <div><h5>Estimated Time Till Shipment: <span id="ship-time">1-2 Business Days</span></h5></div>
+  </section>
+
+  <footer id="foot" >
+    <div class="row mx-auto p-3">
+      <div class="col-6 col-md">
+        <h5>Customer Service</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Order Status</a></li>
+          <li><a class="text-muted" href="#">Shipping Policy</a></li>
+          <li><a class="text-muted" href="#">Return Policy</a></li>
+          <li><a class="text-muted" href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Contact</h5>
+        <ul class="list-unstyled text-small">
+          <li class="text-muted">1234 Paper Way</li>
+          <li class="text-muted">Scranton, PA 19462</li>
+          <li class="text-muted">(933)555-5555</li>
+         </div>
+      <div class="col-6 col-md">
+        <h5>Company Info</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">About</a></li>
+          <li><a class="text-muted" href="#">Careers</a></li>
+          <li><a class="text-muted" href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <i class="fab fa-pied-piper-alt fa-8x"></i>
+      </div>
+    </div>
+  </footer>
+  <script src="iro.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
