@@ -65,7 +65,15 @@ colorBox.on('input:end', function() {
 
 })
 
+//count the number of divs in parent
+//create a new div
+//set width
+
+
 addToBag.addEventListener("click", function(){
   let color = window.getComputedStyle(swatchColor, null).getPropertyValue("background-color");
-  alert(color)
+  let swatch = document.createElement("div");
+  swatch.style.background = color;
+  swatch.style.flexGrow = "1";
+  document.getElementById("cart").appendChild(swatch);
 })
