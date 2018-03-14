@@ -46,6 +46,8 @@ function needAlternatives(color) {
 let colorValues = document.getElementById('color-value')
 let availability = document.getElementById('available')
 let similarStock = document.getElementById('similar')
+let addToBag = document.getElementById('add')
+let swatchColor = document.getElementById('swatch-box')
 
 colorBox.on('input:end', function() {
 
@@ -61,4 +63,9 @@ colorBox.on('input:end', function() {
   availability.style.color = colorCode;
   needAlternatives(colorCode);
 
+})
+
+addToBag.addEventListener("click", function(){
+  let color = window.getComputedStyle(swatchColor, null).getPropertyValue("background-color");
+  alert(color)
 })
