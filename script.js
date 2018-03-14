@@ -65,6 +65,17 @@ colorBox.on('input:end', function() {
 
 })
 
+function setPrice(){
+  let cartCount = document.getElementById("cart").children.length
+  let price = cartCount * 5.35
+  return price.toFixed(2)
+}
+
+function adjustPrice() {
+  let cost = setPrice();
+  document.getElementById("subtotal").innerHTML = cost;
+}
+
 //count the number of divs in parent
 //create a new div
 //set width with flex-box
@@ -75,4 +86,5 @@ addToBag.addEventListener("click", function(){
   swatch.style.background = color;
   swatch.style.flexGrow = "1";
   document.getElementById("cart").appendChild(swatch);
+  adjustPrice();
 })

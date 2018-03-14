@@ -75,7 +75,7 @@ h1 {
 }
 
 #shop-color > div {
-  width: auto;
+  width: 30%;
   display: table-cell;
   vertical-align: middle;
   height: 500px;
@@ -88,6 +88,8 @@ h4, #color-value, #available, #alt-colors {
 
 #similar.hidden {
   display: none;
+  width: 20%;
+  text-align: right;
 }
 
 #add {
