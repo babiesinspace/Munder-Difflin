@@ -7,6 +7,9 @@ let colorBox = new iro.ColorPicker("#color-picker-container", {
   css: {
     "#swatch-box": {
       "background-color": "$color"
+    },
+    ".default": {
+      "background-color": "$color" 
     }
   }
 });
