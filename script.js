@@ -67,9 +67,8 @@ colorBox.on('input:end', function() {
 
 //count the number of divs in parent
 //create a new div
-//set width
-
-
+//set width with flex-box
+//append to parent element
 addToBag.addEventListener("click", function(){
   let color = window.getComputedStyle(swatchColor, null).getPropertyValue("background-color");
   let swatch = document.createElement("div");
