@@ -6,8 +6,13 @@ body {
   background-color: #e9ebe8;
 }
 
-.navbar>.container, .navbar>.container-fluid {
+/*.navbar>.container, .navbar>.container-fluid {
   margin: 0 auto;
+}*/
+
+#foot {
+  background-color: #adb3b2;
+  padding-top: 2%;
 }
 
 h1 {
