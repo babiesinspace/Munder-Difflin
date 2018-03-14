@@ -1,5 +1,13 @@
+/*html {
+  height: 100%
+}
+*/
 body {
   background-color: #e9ebe8;
+}
+
+.navbar>.container, .navbar>.container-fluid {
+  margin: 0 auto;
 }
 
 h1 {
@@ -10,6 +18,7 @@ h1 {
   z-index: 10;
   margin: 0;
   position: absolute;
+  text-align: center;
   top: 50%;
   left: 50%;
   margin-right: -50%;
@@ -21,13 +30,14 @@ h1 {
   height: 200px;
   border: 2px solid black;
   background-color: orange;
-  margin-top: 10%;
+  margin-top: 20%;
 }
 
 #cart-container {
   margin: 0 auto;
+  margin-top: 1%;
   width: 90%;
-  height: 300px;
+  height: 302px;
   border: 1px solid black;
   position: relative;
 }
@@ -54,7 +64,7 @@ h1 {
   height: 500px;
 }
 
-h4, #color-value, #available {
+h4, #color-value, #available, #alt-colors {
   font-size: 1.5em;
   line-height: 1.2em;
 }
