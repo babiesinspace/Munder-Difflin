@@ -47,12 +47,12 @@ let colorValues = document.getElementById('color-value')
 let availability = document.getElementById('available')
 let similarStock = document.getElementById('similar')
 
-colorBox.on('color:change', function(color, changes) {
+colorBox.on('input:end', function() {
 
   colorValues.innerHTML = [
-    "hex: " + color.hexString,
-    "rgb: " + color.rgbString,
-    "hsl: " + color.hslString,
+    "hex: " + colorBox.color.hexString,
+    "rgb: " + colorBox.color.rgbString,
+    "hsl: " + colorBox.color.hslString,
   ].join("<br>");
 
   let inStock = isAvailable();

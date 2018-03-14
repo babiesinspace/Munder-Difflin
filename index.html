@@ -12,7 +12,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">Munder Difflin</a>
+      <i class="fab fa-pied-piper-alt fa-2x"></i><a class="navbar-brand" href="#"> Munder Difflin</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -53,10 +53,13 @@
     <div id="sample">
       <div id="swatch-box"></div>
       <h4>Values:</h4>
-      <div id="color-value"></div>
-      <h4>Availability:</h4>
-      <div id="available"></div>
-      <button>Add to Bag</button>
+      <div id="color-value">hex: #a3dfff</br>rgb: rgb(163, 223, 255)</br>hsl: hsl(201, 100%, 82%)</div>
+      <div id="show-stock">
+        <h4>Availability:  </h4><span id="available"></span>       
+      </div>
+      <div>
+        <button id="add">Add to Bag</button>
+      </div>
     </div>
     <div id="similar" class="hidden">
       <h4>Similar Items:</h4>
@@ -70,9 +73,11 @@
   </section>
 
   <section id="mini-cart">
-    <div>Holds the Subtotal:</div>
-    <button>Check Out</button>
-    <div>Shows the Shipping Time Estimate</div>
+    <div><h5>Subtotal: $<span id="subtotal">0</span></h5></div>
+    <div>
+      <h5><button>Check Out</button></h5>
+    </div>
+    <div><h5>Estimated Time Till Shipment: <span id="ship-time">1-2 Business Days</span></h5></div>
   </section>
 
   <footer id="foot" >
