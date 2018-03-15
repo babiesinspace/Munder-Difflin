@@ -38,8 +38,8 @@ function shippingEst() {
   let color = window.getComputedStyle(availability, null).getPropertyValue("color")
   let estimate = document.getElementById("ship-time");
   let warning = "There is an availability issue in your cart. Please call for details."
-  let caution = "3 - 5 Weeks. There are items in your cart on order."
-  let high = "1 - 2 Business Days"
+  let caution = "3-5 Weeks. There are items in your cart on order."
+  let high = "1-2 Business Days"
   if (color === "rgb(255, 0, 0)") {
     estimate.innerHTML = warning;
   } else if (color === "rgb(255, 255, 0)" && estimate.innerHTML != warning) {
