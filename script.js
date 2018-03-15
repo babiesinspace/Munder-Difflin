@@ -65,6 +65,7 @@ let addToBag = document.getElementById('add')
 let swatchColor = document.getElementById('swatch-box')
 let currentCost = document.getElementById("subtotal")
 let cart = document.getElementById("cart")
+let cartContainer = document.getElementById("cart-container")
 
 colorBox.on('input:end', function() {
 
@@ -96,6 +97,9 @@ function adjustPrice() {
 function fireAnimation(){
   swatchColor.classList.add("rotateOut")
   setTimeout(function() { swatchColor.classList.remove("rotateOut"); }, 500);
+  cart.classList.add("animate");
+  cart.classList.add("slideInRight");
+  setTimeout(function() { cart.classList.remove("slideInRight"); }, 500);
 }
 
 //count the number of divs in parent
@@ -105,10 +109,12 @@ function fireAnimation(){
 addToBag.addEventListener("click", function(){
   let color = window.getComputedStyle(swatchColor, null).getPropertyValue("background-color");
   let swatch = document.createElement("div");
+  // let firstSwatch = window.getComputedStyle(cartContainer, null).getPropertyValue("background-color");
+  // firstSwatch.style.background = color;
   swatch.style.background = color;
   swatch.style.flexGrow = "1";
-  setTimeout(function() { document.getElementById("cart").appendChild(swatch) }, 100);
-  // document.getElementById("cart").appendChild(swatch);
+  // setTimeout(function() { cart.appendChild(swatch) }, 100);
+  cart.appendChild(swatch);
   adjustPrice();
   shippingEst();
   fireAnimation();
