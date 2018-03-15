@@ -94,8 +94,8 @@ function adjustPrice() {
 }
 
 function fireAnimation(){
-  addToBag.classList.add("rotateOut")
-  setTimeout(function() { addToBag.classList.remove("rotateOut"); }, 500);
+  swatchColor.classList.add("rotateOut")
+  setTimeout(function() { swatchColor.classList.remove("rotateOut"); }, 500);
 }
 
 //count the number of divs in parent
@@ -107,7 +107,8 @@ addToBag.addEventListener("click", function(){
   let swatch = document.createElement("div");
   swatch.style.background = color;
   swatch.style.flexGrow = "1";
-  document.getElementById("cart").appendChild(swatch);
+  setTimeout(function() { document.getElementById("cart").appendChild(swatch) }, 100);
+  // document.getElementById("cart").appendChild(swatch);
   adjustPrice();
   shippingEst();
   fireAnimation();
