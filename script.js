@@ -1,6 +1,4 @@
 let colorBox = new iro.ColorPicker("#color-picker-container", {
-  width: 350,
-  height: 400,
   color: {r: 163, g: 223, b: 255},
   borderWidth: 1,
   borderColor: "black",
@@ -65,6 +63,7 @@ let addToBag = document.getElementById('add')
 let swatchColor = document.getElementById('swatch-box')
 let currentCost = document.getElementById("subtotal")
 let cart = document.getElementById("cart")
+let cartContainer = document.getElementById("cart-container")
 
 colorBox.on('input:end', function() {
 
@@ -93,6 +92,14 @@ function adjustPrice() {
   currentCost.innerHTML = cost;
 }
 
+function fireAnimation(){
+  swatchColor.classList.add("rotateOut")
+  setTimeout(function() { swatchColor.classList.remove("rotateOut"); }, 500);
+  cart.classList.add("animate");
+  cart.classList.add("slideInRight");
+  setTimeout(function() { cart.classList.remove("slideInRight"); }, 500);
+}
+
 //count the number of divs in parent
 //create a new div
 //set width with flex-box
@@ -102,9 +109,10 @@ addToBag.addEventListener("click", function(){
   let swatch = document.createElement("div");
   swatch.style.background = color;
   swatch.style.flexGrow = "1";
-  document.getElementById("cart").appendChild(swatch);
+  cart.appendChild(swatch);
   adjustPrice();
-  shippingEst()
+  shippingEst();
+  fireAnimation();
 })
 
 let checkOut = document.getElementById('checkout')

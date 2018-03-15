@@ -1,9 +1,5 @@
-/*html {
-  height: 100%
-}
-*/
 body {
-  background-color: #e9ebe8;
+  background-image: url("crumpled.jpg");
 }
 
 /*.navbar>.container, .navbar>.container-fluid {
@@ -31,10 +27,10 @@ h1 {
 }
 
 #swatch-box {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border: 2px solid black;
-  margin-top: 20%;
+  margin-top: 5%;
   margin-bottom: 3%;
 }
 
@@ -42,13 +38,12 @@ h1 {
   margin: 0 auto;
   margin-top: 1%;
   width: 90%;
-  height: 302px;
-  border: 1px solid black;
+  height: 202px;
   position: relative;
 }
 
 #cart {
-  height: 300px;
+  height: 200px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -72,14 +67,17 @@ h1 {
   display: table;
   margin: 0 auto;
   width: 90%;
+  height: 200px;
 }
 
 #shop-color > div {
   width: 30%;
   display: table-cell;
   vertical-align: middle;
-  height: 500px;
+  height: 200px;
+  margin: 2%;
 }
+
 
 h4, #color-value, #available, #alt-colors {
   font-size: 1.5em;
@@ -109,3 +107,83 @@ h4, #color-value, #available, #alt-colors {
   margin-right: 5%;
   margin-left: 5%;
 }*/
+
+.rotateOut {
+  -webkit-animation-name: rotateOut;
+  animation-name: rotateOut;
+  animation-duration: 1s;
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  animation-duration: 0.5s;  
+}
+
+@media only screen and (max-width: 800px) {
+    #shop-color {
+      margin: 5%;
+    }
+    #shop-color > div {
+      display: table-row;
+      width: 100%;
+    }
+}
+
+@-webkit-keyframes rotateOut {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 200deg);
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOut {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 200deg);
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
