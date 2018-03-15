@@ -1,6 +1,4 @@
 let colorBox = new iro.ColorPicker("#color-picker-container", {
-  width: 350,
-  height: 400,
   color: {r: 163, g: 223, b: 255},
   borderWidth: 1,
   borderColor: "black",
