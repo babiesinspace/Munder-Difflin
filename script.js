@@ -107,11 +107,8 @@ function fireAnimation(){
 addToBag.addEventListener("click", function(){
   let color = window.getComputedStyle(swatchColor, null).getPropertyValue("background-color");
   let swatch = document.createElement("div");
-  // let firstSwatch = window.getComputedStyle(cartContainer, null).getPropertyValue("background-color");
-  // firstSwatch.style.background = color;
   swatch.style.background = color;
   swatch.style.flexGrow = "1";
-  // setTimeout(function() { cart.appendChild(swatch) }, 100);
   cart.appendChild(swatch);
   adjustPrice();
   shippingEst();
