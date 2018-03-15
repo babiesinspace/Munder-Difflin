@@ -34,6 +34,21 @@ function stoplight(availability){
   }
 }
 
+function shippingEst() {
+  let color = window.getComputedStyle(availability, null).getPropertyValue("color")
+  let estimate = document.getElementById("ship-time");
+  let warning = "There is an availability issue in your cart. Please call for details."
+  let caution = "3-5 Weeks. There are items in your cart on order."
+  let high = "1-2 Business Days"
+  if (color === "rgb(255, 0, 0)") {
+    estimate.innerHTML = warning;
+  } else if (color === "rgb(255, 255, 0)" && estimate.innerHTML != warning) {
+    estimate.innerHTML = caution;
+  } else if (estimate != high && estimate.innerHTML != warning) {
+    estimate.innerHTML = high;
+  } 
+}
+
 //check if you need to show similar stock items
 function needAlternatives(color) {
   if (color === "red") {
@@ -48,6 +63,8 @@ let availability = document.getElementById('available')
 let similarStock = document.getElementById('similar')
 let addToBag = document.getElementById('add')
 let swatchColor = document.getElementById('swatch-box')
+let currentCost = document.getElementById("subtotal")
+let cart = document.getElementById("cart")
 
 colorBox.on('input:end', function() {
 
@@ -65,15 +82,36 @@ colorBox.on('input:end', function() {
 
 })
 
+function setPrice(){
+  let cartCount = cart.children.length
+  let price = cartCount * 5.35
+  return price.toFixed(2)
+}
+
+function adjustPrice() {
+  let cost = setPrice();
+  currentCost.innerHTML = cost;
+}
+
 //count the number of divs in parent
 //create a new div
-//set width
-
-
+//set width with flex-box
+//append to parent element
 addToBag.addEventListener("click", function(){
   let color = window.getComputedStyle(swatchColor, null).getPropertyValue("background-color");
   let swatch = document.createElement("div");
   swatch.style.background = color;
   swatch.style.flexGrow = "1";
   document.getElementById("cart").appendChild(swatch);
+  adjustPrice();
+  shippingEst()
+})
+
+let checkOut = document.getElementById('checkout')
+
+checkOut.addEventListener("click", function(){
+  let total = currentCost.innerHTML
+  let cartCount = cart.children.length
+  alert(`Your order for ${cartCount} swatches, totaling $${currentCost.innerHTML} has been placed!`)
+  location.reload()
 })
