@@ -63,6 +63,8 @@ let availability = document.getElementById('available')
 let similarStock = document.getElementById('similar')
 let addToBag = document.getElementById('add')
 let swatchColor = document.getElementById('swatch-box')
+let currentCost = document.getElementById("subtotal")
+let cart = document.getElementById("cart")
 
 colorBox.on('input:end', function() {
 
@@ -81,14 +83,14 @@ colorBox.on('input:end', function() {
 })
 
 function setPrice(){
-  let cartCount = document.getElementById("cart").children.length
+  let cartCount = cart.children.length
   let price = cartCount * 5.35
   return price.toFixed(2)
 }
 
 function adjustPrice() {
   let cost = setPrice();
-  document.getElementById("subtotal").innerHTML = cost;
+  currentCost.innerHTML = cost;
 }
 
 //count the number of divs in parent
@@ -103,4 +105,13 @@ addToBag.addEventListener("click", function(){
   document.getElementById("cart").appendChild(swatch);
   adjustPrice();
   shippingEst()
+})
+
+let checkOut = document.getElementById('checkout')
+
+checkOut.addEventListener("click", function(){
+  let total = currentCost.innerHTML
+  let cartCount = cart.children.length
+  alert(`Your order for ${cartCount} swatches, totaling $${currentCost.innerHTML} has been placed!`)
+  location.reload()
 })
