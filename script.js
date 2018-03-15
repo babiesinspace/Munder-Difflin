@@ -93,6 +93,11 @@ function adjustPrice() {
   currentCost.innerHTML = cost;
 }
 
+function fireAnimation(){
+  addToBag.classList.add("rotateOut")
+  setTimeout(function() { addToBag.classList.remove("rotateOut"); }, 500);
+}
+
 //count the number of divs in parent
 //create a new div
 //set width with flex-box
@@ -104,7 +109,8 @@ addToBag.addEventListener("click", function(){
   swatch.style.flexGrow = "1";
   document.getElementById("cart").appendChild(swatch);
   adjustPrice();
-  shippingEst()
+  shippingEst();
+  fireAnimation();
 })
 
 let checkOut = document.getElementById('checkout')
